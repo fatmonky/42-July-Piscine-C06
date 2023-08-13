@@ -6,7 +6,7 @@
 /*   By: pteh <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/12 15:58:05 by pteh              #+#    #+#             */
-/*   Updated: 2023/08/13 13:57:40 by pteh             ###   ########.fr       */
+/*   Updated: 2023/08/13 16:30:59 by pteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int	main(int argc, char **argv)
 		{
 			while (comparator < argc)
 			{
-				if (ft_strcmp(argv[cursor], argv[comparator]) > 0)
+				if (ft_strcmp(argv[cursor], argv[comparator]) < 0)
 					ft_swap(&argv[cursor], &argv[comparator]);
 				comparator++;
 			}
