@@ -52,17 +52,21 @@ int	main(int argc, char **argv)
  // - outer while loop to iterate y
  // - outer outer while loop to iterate x.
  // - comparison string should also be comparing char**. 
-	int	i;
+	int	cursor;
+	int	comparator;
 
-	i = 1;
-	while (i < argc - 1)
+	cursor = 1; //this is the first string, which should always be the smallest. 
+	while (cursor < argc - 1)
 	{
-		if (ft_strcmp(argv[i - 1], argv[i]) > 0)
+		while (comparator < argc - 1) //what's the condition here?
 		{
-			ft_swap(argv[i - 1], argv[i]);
-			ft_print_params(argv[i]);
+			if (ft_strcmp(argv[cursor], argv[cursor]) > 0)
+			{
+				ft_swap(argv[cursor], argv[comparator]);
+			}
 		}
+		ft_print_params(argv[cursor]);
 		ft_putchar('\n');
-		i++;
+		cursor++;
 	}
 }
